@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>hyperledger术语表 | Blog of Geowind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="区块链">
+  
+  
+  
+  
+  <meta name="description" content="超级账本（hyperledger）是Linux基金会于2015年发起的推进区块链数字技术和交易验证的开源项目，加入成员包括：荷兰银行（ABN AMRO）、埃森哲（Accenture）等十几个不同利益体，目标是让成员共同合作，共建开放平台，满足来自多个不同行业各种用户案例，并简化业务流程。">
+<meta name="keywords" content="区块链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hyperledger术语表">
+<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/bc09e2e8.html">
+<meta property="og:site_name" content="Blog of Geowind">
+<meta property="og:description" content="超级账本（hyperledger）是Linux基金会于2015年发起的推进区块链数字技术和交易验证的开源项目，加入成员包括：荷兰银行（ABN AMRO）、埃森哲（Accenture）等十几个不同利益体，目标是让成员共同合作，共建开放平台，满足来自多个不同行业各种用户案例，并简化业务流程。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-21T05:14:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hyperledger术语表">
+<meta name="twitter:description" content="超级账本（hyperledger）是Linux基金会于2015年发起的推进区块链数字技术和交易验证的开源项目，加入成员包括：荷兰银行（ABN AMRO）、埃森哲（Accenture）等十几个不同利益体，目标是让成员共同合作，共建开放平台，满足来自多个不同行业各种用户案例，并简化业务流程。">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
+  
+  <link rel="icon" href="/GeowindBlog/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/GeowindBlog/css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GeowindBlog/css/hiero.css">
+  <link rel="stylesheet" href="/GeowindBlog/css/glyphs.css">
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/GeowindBlog/css/my.css">
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+</head>
+</html>
+<script>
+var themeMenus = {};
+
+  themeMenus["/GeowindBlog/"] = "Home"; 
+
+  themeMenus["/GeowindBlog/archives/"] = "Archives"; 
+
+  themeMenus["/GeowindBlog/categories/"] = "Categories"; 
+
+  themeMenus["/GeowindBlog/tags/"] = "Tags"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/GeowindBlog/" rel="home">
+                <img style="margin-bottom: 10px;" width="100px" height="100px" alt="Hike News" src=" /GeowindBlog/img/author.jpg">
+              </a>
+            
+          </h1>
+
+          
+            <div class="site-description">Everyone make a difference , Geowind Here</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/GeowindBlog/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/GeowindBlog/archives/">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/GeowindBlog/categories/">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/GeowindBlog/tags/">Tags</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/GeowindBlog/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-hyperledger术语表" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      hyperledger术语表
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/GeowindBlog/archives/bc09e2e8.html" class="article-date">
+	  <time datetime="2018-10-21T05:14:00.000Z" itemprop="datePublished">October 21, 2018</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>超级账本（hyperledger）是Linux基金会于2015年发起的推进区块链数字技术和交易验证的开源项目，加入成员包括：荷兰银行（ABN AMRO）、埃森哲（Accenture）等十几个不同利益体，目标是让成员共同合作，共建开放平台，满足来自多个不同行业各种用户案例，并简化业务流程。<br><a id="more"></a></p>
+<hr>
+<ul>
+<li>Anchor Peer - <strong>锚节点</strong>  </li>
+</ul>
+<blockquote>
+<p>锚节点是通道中能被所有对等节点探测，并能与之进行通信的一种对等节点。通道中的每个成员都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节点来发现通道中存在的其他节点。</p>
+</blockquote>
+<ul>
+<li>Block - <strong>区块</strong></li>
+</ul>
+<blockquote>
+<p>在一个通道上，（区块是）一组有序交易的集合。区块往往通过密码学手段（Hash值）连接到前导区块。</p>
+</blockquote>
+<ul>
+<li>Chain - <strong>链</strong></li>
+</ul>
+<blockquote>
+<p>Chain就是block之间以hash连接为结构的交易日志。Peer从order service接收交易block，并根据背书策略和并发冲突标记block上的交易是否有效，然后将该block追加到Peer文件系统中的hash chain上。</p>
+</blockquote>
+<ul>
+<li>Chaincode - <strong>链码</strong></li>
+</ul>
+<blockquote>
+<p>链码是一个运行在账本上的软件，它可以对资产进行编码，其中的交易指令（或者叫业务逻辑）也可以用来修改资产。</p>
+</blockquote>
+<ul>
+<li>Channel - <strong>通道</strong></li>
+</ul>
+<blockquote>
+<p>通道是构建在”Fabric”网络上的私有区块链，实现了数据的隔离和保密。通道特定的账本在通道中是所有对等节点共享的，并且交易方必须通过该通道的正确验证才能与账本进行交互。通道是一个”配置块“来定义的。</p>
+</blockquote>
+<ul>
+<li>Commitment - <strong>确认节点</strong></li>
+</ul>
+<blockquote>
+<p>一个通道中的每个对等节点都会验证交易的有序区块，然后将区块提交（写或追加）至通道上账本的各个副本。对等节点也会标记每个区块的每笔交易的状态是有效或是无效。</p>
+</blockquote>
+<ul>
+<li>Concurrency Control Version Check -<strong>并发版本检查（CCVC）</strong></li>
+</ul>
+<blockquote>
+<p>CCVC是保持通道中各对等节点间状态同步的一种方法，对等节点并行的执行交易，在交易提交至账本之前，对等节点会检查交易在执行期间督导的数据是否被修改。如果读取的数据在执行和提交之间被改变，就会引发CCVC冲突，该交易就会在账本中被标记为无效，而且值不会更新到状态数据库中。</p>
+</blockquote>
+<ul>
+<li>Configuration Block <strong>配置区块</strong></li>
+</ul>
+<blockquote>
+<p>包含系统链（排序服务)通道定义成员和策略的配置数据。对某个通道或整个网络的配置修改（比如，成员的离开或加入）都将导致生成一个新的配置区块并追加到适当的链上。这个配置区块会包含创世区块的内容加上增量。</p>
+</blockquote>
+<ul>
+<li>Consensus -<strong>共识</strong></li>
+</ul>
+<blockquote>
+<p>共识是贯穿整个交易流程的广义术语，其用于产生一个对于排序的同意书和确认构成区块的交易集的准确性。</p>
+</blockquote>
+<ul>
+<li>Current State -<strong>当前状态</strong></li>
+</ul>
+<blockquote>
+<p>ledger的current state表示其chain交易log中所有key的最新值。peer会将处理过的block中的每个交易对应的修改value提交到ledger的current state，由于current state表示channel所知的所有最新的k-v，所有current state 也被称为World State.Chaincode 执行交易Proposal就是针对current state.</p>
+</blockquote>
+<ul>
+<li>Dynamic Membership -<strong>动态成员</strong></li>
+</ul>
+<blockquote>
+<p>Fabric支持动态添加-移除members,peer和ordering服务节点，而不会影响整个网络的操作性。当业务关系调整或因个各种原因需添加-移除实体时，Dynamic Membership至关重要。</p>
+</blockquote>
+<ul>
+<li>Endorsement -<strong>背书</strong></li>
+</ul>
+<blockquote>
+<p>Endorsement是指一个peer执行一个交易并返回YES-NO给生成交易proposal的一个client app的过程。chaincode具有相应的endorsement policies,其中指指定了endorsing peer.</p>
+</blockquote>
+<ul>
+<li>Endorsement policy -<strong>背书策略</strong></li>
+</ul>
+<blockquote>
+<p>Endorsement policy 定义了依赖与特定chaincode执行交易的channel上的peer响应结果（endorsements）的必要组合条件（即返回Yes或No的条件）。<br>Endorsement policy 可指定某一chaincode，可以对交易背书的最小背书节点数或者最小背书节点百分比。背书策略由背书节点基于应用程序和对抵御不良行为的期望水平来组织管理。在install和instantiate Chaincode(deploy tx)时需要指定背书策略。</p>
+</blockquote>
+<ul>
+<li>Fabric-ca -<strong>证书节点</strong></li>
+</ul>
+<blockquote>
+<p>Fabric-ca是默认的证书管理组件，它向网络成员及其用户颁发基于PKI的证书。CA为每个成员颁发一个根证书（rootGert）,为每个授权用户颁发一个注册证书（eCert），为每个注册证书颁发大量交易证书（tCert）.</p>
+</blockquote>
+<ul>
+<li>Genesis Block -<strong>创世区块</strong></li>
+</ul>
+<blockquote>
+<p>Genesis Block是初始化区块链网络或channel的配置区块，也是链上的第一个区块。</p>
+</blockquote>
+<ul>
+<li>Gossip Protocol -<strong>Gossip协议</strong></li>
+</ul>
+<blockquote>
+<p>Gossip数据传输协议有三项功能：  </p>
+<ol>
+<li>管理peer发现和channel成员；  </li>
+<li>channel上的所有peer间广播账本数据；  </li>
+<li>channel上的所有peer间同步账本数据。</li>
+</ol>
+</blockquote>
+<ul>
+<li>Initialize -<strong>初始化</strong></li>
+</ul>
+<blockquote>
+<p>一个初始化chaincode程序的方法</p>
+</blockquote>
+<ul>
+<li>Install -<strong>安装</strong></li>
+</ul>
+<blockquote>
+<p>将chaincode放到peer的文件系统的过程。</p>
+</blockquote>
+<ul>
+<li>Instantiate -<strong>实例化</strong></li>
+</ul>
+<blockquote>
+<p>启动chaincode容器的过程。</p>
+</blockquote>
+<ul>
+<li>Invoke -<strong>调用</strong></li>
+</ul>
+<blockquote>
+<p>用于调用chaincode内的函数。Chain invoke就是一个交易proposal,然后执行模块化的流程（背书，共识，验证，提交）。Invoke的结构是一个函数和一个参数数组。</p>
+</blockquote>
+<ul>
+<li>Ledger -<strong>账本</strong></li>
+</ul>
+<blockquote>
+<p>Ledger是一个channel的chain和由channel中每个peer维护的数据库。</p>
+</blockquote>
+<ul>
+<li>Member -<strong>成员</strong></li>
+</ul>
+<blockquote>
+<p>拥有网络唯一根证书的合法独立实体。像peer节点和app client这样的网络组件会链接到一个Member。</p>
+</blockquote>
+<ul>
+<li>Membership Service Provider -MSP</li>
+</ul>
+<blockquote>
+<p>MSP是指为client和peer提供证书的系统抽象组件。Client用证书来认证他们的交易；peer用证书认证其交易背书。该接口与系统的交易处理组件密切相关，旨在使已定义的成员身份服务组件以这中方式顺利插入而不会修改系统的交易处理组件的核心。</p>
+</blockquote>
+<ul>
+<li>Membership Services -<strong>成员服务</strong></li>
+</ul>
+<blockquote>
+<p>成员服务在许可的区块链网络上认证，授权和管理身份。在peer的order中运行的成员服务的代码都会认证和授权区块链操作。它是基于PKI的MSP实现。<br>Fabric-ca组件实现了成员服务，来管理身份，特别的，它处理ECert和TCert的颁发和插销。<br>ECert是长期的身份凭证；TCert是短期的身份凭证，是匿名和不可链接的。</p>
+</blockquote>
+<ul>
+<li>OrderingService -<strong>排序服务和共识服务</strong></li>
+</ul>
+<blockquote>
+<p>将交易排序放入block的节点的集合。Ordering service 独立与peer流程之外，并以先到先得的方式为网络上所有的channel作交易排序。Ordering service支持可插拔式，目前默认Solo(单节点共识),Kafka(分布式队列)和SBFT（简单拜占庭容错），ordering service是这个网络的公用bingding,包含与每个Member相关的加密材料。</p>
+</blockquote>
+<ul>
+<li>Peer -<strong>节点</strong></li>
+</ul>
+<blockquote>
+<p>一个网络实体，维护ledger并允许Chaincode容器来对ledger执行read-write操作。Peer由Member拥有和维护。</p>
+</blockquote>
+<ul>
+<li>Policy -<strong>策略</strong></li>
+</ul>
+<blockquote>
+<p>有背书策略，校验策略，区块提交策略，chaincode管理策略和网络-通道管理策略。</p>
+</blockquote>
+<ul>
+<li>Proposal -<strong>提案</strong></li>
+</ul>
+<blockquote>
+<p>一个针对channel中某peer的背书请求。每个proposal要么是Chaincode instantiate要么是Chaincode invoke。</p>
+</blockquote>
+<ul>
+<li>Query -<strong>查询</strong></li>
+</ul>
+<blockquote>
+<p>对于current state中某个Key的value的查询请求。</p>
+</blockquote>
+<ul>
+<li>Software Development Kit -<strong>SDK</strong></li>
+</ul>
+<blockquote>
+<p>SDK为开发人员提供了一个结构化的库环境，用于编写和测试链码应用程序。SDK完全可以通过标准接口实现配置和扩展，像签名的加密算法，日志框架和state存储这样的组件都可以轻松地实现替换。SDK API使用gRPC进行交易处理，成员服务，节点遍历以及事件处理都是据此与fabric通信。目前SDK支持Node.js,java,和Python.</p>
+</blockquote>
+<ul>
+<li>State Datebase -<strong>stateDB</strong></li>
+</ul>
+<blockquote>
+<p>为了从Chaincode中高效的读写，current state数据存储在stateDB中，包括leveDB和couchDB.</p>
+</blockquote>
+<ul>
+<li>Transaction -<strong>交易</strong></li>
+</ul>
+<blockquote>
+<p>Chaincode的invoke或instantiate操作。Invoke是从ledger中请求read-write set;Instantiate是请求在peer上启动Chaincode容器。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/GeowindBlog/categories/区块链/">区块链</a>, <a class="article-category-link" href="/GeowindBlog/categories/区块链/超级账本/">超级账本</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/GeowindBlog/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/GeowindBlog/archives/e15dfbad.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to become a hacker</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 Blog of Geowind All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/GeowindBlog/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/GeowindBlog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/GeowindBlog/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/GeowindBlog/categories/" class="mobile-nav-link">Categories</a>
+  
+    <a href="/GeowindBlog/tags/" class="mobile-nav-link">Tags</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+<script src="/GeowindBlog/js/scripts.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/GeowindBlog/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
