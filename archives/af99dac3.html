@@ -13,7 +13,7 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>人工智能初识（一）：什么是神经网络 | Blog of Geowind</title>
+  <title>人工智能初识（一）：监督学习型神经网络 | Blog of Geowind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="人工智能神经网络">
@@ -21,23 +21,20 @@
   
   
   
-  <meta name="description" content="了解人工智能？了解神经网络？">
+  <meta name="description" content="监督学习与非监督学习？">
 <meta name="keywords" content="人工智能,神经网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人工智能初识（一）：什么是神经网络">
-<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/1ece966.html">
+<meta property="og:title" content="人工智能初识（一）：监督学习型神经网络">
+<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/af99dac3.html">
 <meta property="og:site_name" content="Blog of Geowind">
-<meta property="og:description" content="了解人工智能？了解神经网络？">
+<meta property="og:description" content="监督学习与非监督学习？">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/1_1_1.png">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/1_1_2.png">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/1_1_3.png">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/1_1_4.png">
-<meta property="og:updated_time" content="2018-10-23T02:49:18.000Z">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/1_2_1.png">
+<meta property="og:updated_time" content="2018-10-23T03:22:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人工智能初识（一）：什么是神经网络">
-<meta name="twitter:description" content="了解人工智能？了解神经网络？">
-<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/1_1_1.png">
+<meta name="twitter:title" content="人工智能初识（一）：监督学习型神经网络">
+<meta name="twitter:description" content="监督学习与非监督学习？">
+<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/1_2_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
   
@@ -171,7 +168,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-人工智能初识（一）：什么是神经网络" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-人工智能初识（一）：监督学习型神经网络" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -179,7 +176,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      人工智能初识（一）：什么是神经网络
+      人工智能初识（一）：监督学习型神经网络
     </h1>
   
 
@@ -187,8 +184,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/GeowindBlog/archives/1ece966.html" class="article-date">
-	  <time datetime="2018-10-23T02:49:18.000Z" itemprop="datePublished">October 23, 2018</time>
+	Posted on <a href="/GeowindBlog/archives/af99dac3.html" class="article-date">
+	  <time datetime="2018-10-23T03:22:49.000Z" itemprop="datePublished">October 23, 2018</time>
 	</a>
 
       
@@ -199,16 +196,17 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>了解人工智能？了解神经网络？<br><a id="more"></a></p>
-<h1 id="人工智能初识（一）：什么是神经网络"><a href="#人工智能初识（一）：什么是神经网络" class="headerlink" title="人工智能初识（一）：什么是神经网络"></a>人工智能初识（一）：什么是神经网络</h1><blockquote>
-<p>转载原文链接：<a href="https://blog.csdn.net/jiangjunshow/article/details/77368314" target="_blank" rel="noopener">https://blog.csdn.net/jiangjunshow/article/details/77368314</a></p>
+        <p>监督学习与非监督学习？<br><a id="more"></a></p>
+<h1 id="人工智能初识（一）：监督学习型神经网络"><a href="#人工智能初识（一）：监督学习型神经网络" class="headerlink" title="人工智能初识（一）：监督学习型神经网络"></a>人工智能初识（一）：监督学习型神经网络</h1><hr>
+<blockquote>
+<p>原文转载：<a href="https://blog.csdn.net/jiangjunshow/article/details/77373847" target="_blank" rel="noopener">https://blog.csdn.net/jiangjunshow/article/details/77373847</a></p>
 </blockquote>
-<h2 id="什么是人工智能"><a href="#什么是人工智能" class="headerlink" title="什么是人工智能"></a>什么是人工智能</h2><p>什么是人工智能？通俗来讲，就是让机器能像人一样思考。这个无需解释太多，因为通过各种科幻电影我们已经对人工智能很熟悉了。大家现在感兴趣的应该是——如何实现人工智能？</p>
-<p>从1956年夏季首次提出“人工智能”这一术语开始，科学家们尝试了各种方法来实现它。这些方法包括专家系统，决策树、归纳逻辑、聚类等等，但这些都是假智能。直到人工神经网络技术的出现，才让机器拥有了“真智能”。</p>
-<p>为什么说之前的方法都是假智能呢？因为我们人类能清清楚楚地知道它们内部的分析过程，它们只是一个大型的复杂的程序而已；而人工神经网络则不同，它的内部是一个黑盒子，就像我们人类的大脑一样，我们不知道它内部的分析过程，我们不知道它是如何识别出人脸的，也不知道它是如何打败围棋世界冠军的。我们只是为它构造了一个躯壳而已，就像人类一样，我们只是生出了一个小孩而已，他脑子里是如何想的我们并不知道！这就是人工智能的可怕之处，因为将来它有可能会觉得我们人类不应该活在这个世界上，而把我们消灭掉；为此，世界上已经成立了不少安全协会来防范人工智能。</p>
-<h2 id="什么是神经网络"><a href="#什么是神经网络" class="headerlink" title="什么是神经网络"></a>什么是神经网络</h2><p>人工神经网络是受到人类大脑结构的启发而创造出来的，这也是它能拥有真智能的根本原因。在我们的大脑中，有数十亿个称为神经元的细胞，它们连接成了一个神经网络。<br><img src="../assets/1_1_1.png" alt="大脑神经网络"><br>人工神经网络正是模仿了上面的网络结构。下面是一个人工神经网络的构造图。每一个圆代表着一个神经元，他们连接起来构成了一个网络。<br><img src="../assets/1_1_2.png" alt="人工神经网络"><br>人类大脑神经元细胞的树突接收来自外部的多个强度不同的刺激，并在神经元细胞体内进行处理，然后将其转化为一个输出结果。如下图所示。<br><img src="../assets/1_1_3.png" alt="神经元输入输出"><br> 人工神经元也有相似的工作原理。如下图所示。<br><img src="../assets/1_1_4.png" alt="人工神经元"><br>上面的x是神经元的输入，相当于树突接收的多个外部刺激。w是每个输入对应的权重，它影响着每个输入x的刺激强度。</p>
-<p>大脑的结构越简单，那么智商就越低。单细胞生物是智商最低的了。人工神经网络也是一样的，网络越复杂它就越强大，所以我们需要深度神经网络。这里的深度是指层数多，层数越多那么构造的神经网络就越复杂。</p>
-<h2 id="什么是深度学习"><a href="#什么是深度学习" class="headerlink" title="什么是深度学习"></a>什么是深度学习</h2><p>训练深度神经网络的过程就叫做深度学习。网络构建好了后，我们只需要负责不停地将训练数据输入到神经网络中，它内部就会自己不停地发生变化不停地学习。打比方说我们想要训练一个深度神经网络来识别猫。我们只需要不停地将猫的图片输入到神经网络中去。训练成功后，我们任意拿来一张新的图片，它都能判断出里面是否有猫。但我们并不知道他的分析过程是怎样的，它是如何判断里面是否有猫的。就像当我们教小孩子认识猫时，我们拿来一些白猫，告诉他这是猫，拿来一些黑猫，告诉他这也是猫，他脑子里会自己不停地学习猫的特征。最后我们拿来一些花猫，问他，他会告诉你这也是猫。但他是怎么知道的？他脑子里的分析过程是怎么样的？我们无从知道~~</p>
+<h2 id="有监督学习和无监督学习"><a href="#有监督学习和无监督学习" class="headerlink" title="有监督学习和无监督学习"></a>有监督学习和无监督学习</h2><p>什么是监督学习？<br>简单的回答是：判断是否是监督学习，就看输入数据是否有标签。输入数据有标签，则为有监督学习，没标签则为无监督学习。</p>
+<p>要详细解释什么是监督学习，那么先要明白“什么是学习？”。一个成语就可概括：举一反三。此处以高考为例，高考的题目在上考场前我们未必做过，但在高中三年我们做过很多很多题目，由此学会了解题方法，因此考场上面对陌生问题也可以算出答案。机器学习的思路也类似：我们利用一些训练数据（高中的大量题库），使机器能够总结出一些规律（总结出解题方法），然后用这些规律来分析未知数据（用解题方法来解答高考题目）。</p>
+<h2 id="分类与聚类"><a href="#分类与聚类" class="headerlink" title="分类与聚类"></a>分类与聚类</h2><p>分类（classification）这种机器学习算法就是一种监督学习。对于分类，输入的训练数据有特征（feature），有标签（label）。也就是我们前面文章中的输入x和输出y。每一个x样本都对应着一个y（输出）标签。所谓的学习，其本质就是找到特征和标签间的关系（mapping），也就是找规律。这样当有特征而无标签的未知数据输入时，我们就可以通过已有的关系得到未知数据标签，即根据新数据进行预测。在上述的分类过程中，如果所有训练数据都有标签，则为有监督学习（supervised learning）。如果数据没有标签，显然就是无监督学习（unsupervised learning），即聚类（clustering）。</p>
+<h2 id="监督学习型神经网络实现"><a href="#监督学习型神经网络实现" class="headerlink" title="监督学习型神经网络实现"></a>监督学习型神经网络实现</h2><p>但到目前为止，几乎所有由人工智能创造的经济价值都是通过监督学习型神经网络实现的。例如广告预测，这可能是最有利可图的人工智能应用了,它也许不是最鼓舞人心的,但肯定是非常有利可图的,通过输入一些关于用户的信息x,神经网络就能预测你是否会点击某个广告（给出输出y来指示某个广告），所以当你看到你朋友，或男朋友，或女朋友手机电脑上面都是些黄色广告时，你基本上可以断定TA的“性趣很浓”，也之所以我一般不会给别人用我的手机或电脑。计算机视觉在过去几年也取得了很大的进步，主要是由于深度学习。您可以输入人脸图像，神经网络会给出这个人的姓名。在语音识别方面的进展也非常激动人心，我们可以输入一段音频到神经网络，相应的文字就被输出来了。机器翻译也取得了巨大的进步，你可以输入英文句子，直接输出中文句子。在自动驾驶中，您可以输入车辆前方的图片以及雷达中的一些信息，基于此，神经网络将告诉您其它汽车的位置（这是自动驾驶系统的关键组成部分）。因此，通过神经网络进行的许多价值创造当前都是通过监督学习来实现的——巧妙地构造数据集，选择什么应该是x，什么应该是y，然后让神经网络来学习这个数据集。</p>
+<h2 id="结构分类神经网络"><a href="#结构分类神经网络" class="headerlink" title="结构分类神经网络"></a>结构分类神经网络</h2><p>另外再补充些知识点。神经网络除了按监督学习和非监督学习来分类外，还按结构来分类。不同结构的神经网络被用于不同的应用程序中。例如，在之前看到的房价预测应用中，我们使用的是标准的神经网络结构，广告预测也是一个相对标准的神经网络。对于图像应用程序，我们经常使用卷积神经网络CNN。对于序列数据应用程序一般使用递归神经网络RNN（例如音频就属于序列数据，是随着时间一段一段表述的，例如英语、汉语都是随着时间一个字一个单词来表述的）。对于更复杂的应用，比如自动驾驶，里面有图像所以需要CNN卷积神经网络，而雷达信息则需要其它类型的神经网络，这就导致了混合的神经网络架构。<br><img src="../assets/1_2_1.png" alt=""><br>为了更具体一点，上面分别给出了各种不同神经网络的结构图。依次是，标准神经网络SNN, 卷积神经网络CNN，递归神经网络RNN。稍后我会解释这些图的含义以及如何实现它。卷积网络通常被用于图像数据。递归神经网络被用于序列数据。</p>
+<p>你也可能听说过机器学习中将数据分为结构化数据和非结构化数据。结构化数据主要表示数据库数据。例如，在房价预测中，您可能会有一个数据库告诉您卧室的大小和数量。又如预测用户是否点击广告时，您可能会获得有关用户的信息，例如年龄，广告的一些信息。所谓结构化数据，意味着每个特征，如房子的大小，卧室的数量或用户的年龄，是具有非常明确的含义的。相比之下，非结构化数据指的是音频，图像。这里的特征可能是图像中的像素值或文本中的单个单词，没有明确的含义。与结构化数据相比，计算机更难以理解非结构化数据。而人类已经进化得非常善于理解音频和图像这些非结构化数据。但这一两年由于深度学习的兴起，计算机对非结构化的理解能力越来越强了。人们在听到有关神经网络对非结构化数据的成功时，例如当神经网络识别出一只猫时，人们都很兴奋。但事实证明，神经网络正在创造的许多短期经济价值其实是在结构化数据上的，比如广告系统。所以在这个课程中，我将介绍的很多技术都将适用于结构化数据和非结构化数据。为了解释算法，在示例中我将会更多的使用非结构化数据。但是，将来在您自己的团队中应用神经网络时，我希望您应该对结构化和非结构化数据都重视。</p>
 
       
     </div>
@@ -254,19 +252,10 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/GeowindBlog/archives/af99dac3.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          人工智能初识（一）：监督学习型神经网络
-        
-      </div>
-    </a>
   
-  
-    <a href="/GeowindBlog/archives/bc09e2e8.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GeowindBlog/archives/1ece966.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">hyperledger术语表</div>
+      <div class="article-nav-title">人工智能初识（一）：什么是神经网络</div>
     </a>
   
 </nav>
@@ -280,7 +269,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能初识（一）：什么是神经网络"><span class="nav-number">1.</span> <span class="nav-text">人工智能初识（一）：什么是神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是人工智能"><span class="nav-number">1.1.</span> <span class="nav-text">什么是人工智能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是神经网络"><span class="nav-number">1.2.</span> <span class="nav-text">什么是神经网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是深度学习"><span class="nav-number">1.3.</span> <span class="nav-text">什么是深度学习</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#人工智能初识（一）：监督学习型神经网络"><span class="nav-number">1.</span> <span class="nav-text">人工智能初识（一）：监督学习型神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有监督学习和无监督学习"><span class="nav-number">1.1.</span> <span class="nav-text">有监督学习和无监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类与聚类"><span class="nav-number">1.2.</span> <span class="nav-text">分类与聚类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习型神经网络实现"><span class="nav-number">1.3.</span> <span class="nav-text">监督学习型神经网络实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构分类神经网络"><span class="nav-number">1.4.</span> <span class="nav-text">结构分类神经网络</span></a></li></ol></li></ol>
     
     </div>
   </aside>
