@@ -13,23 +13,28 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>About | Blog of Geowind</title>
+  <title>人工智能初识（二）：如何将数据输入到神经网络中 | Blog of Geowind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="人工智能神经网络">
   
   
   
-  <meta name="description" content="Everyone make a difference , Geowind Here">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://geowind.org/GeowindBlog/about/index.html">
+  
+  <meta name="description" content="以特征向量的形式输入到神经网络">
+<meta name="keywords" content="人工智能,神经网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人工智能初识（二）：如何将数据输入到神经网络中">
+<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/8c3e5841.html">
 <meta property="og:site_name" content="Blog of Geowind">
-<meta property="og:description" content="Everyone make a difference , Geowind Here">
+<meta property="og:description" content="以特征向量的形式输入到神经网络">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-21T06:24:37.188Z">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
+<meta property="og:updated_time" content="2018-10-23T03:57:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Everyone make a difference , Geowind Here">
+<meta name="twitter:title" content="人工智能初识（二）：如何将数据输入到神经网络中">
+<meta name="twitter:description" content="以特征向量的形式输入到神经网络">
+<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
   
@@ -85,7 +90,7 @@ var themeMenus = {};
 </script>
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   <header id="allheader" class="site-header" role="banner">
@@ -163,7 +168,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-人工智能初识（二）：如何将数据输入到神经网络中" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -171,7 +176,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      about
+      人工智能初识（二）：如何将数据输入到神经网络中
     </h1>
   
 
@@ -179,6 +184,10 @@ var themeMenus = {};
     
     <div class="article-meta">
       
+	Posted on <a href="/GeowindBlog/archives/8c3e5841.html" class="article-date">
+	  <time datetime="2018-10-23T03:57:59.000Z" itemprop="datePublished">October 23, 2018</time>
+	</a>
+
       
 	<span id="busuanzi_container_page_pv">
 	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
@@ -187,246 +196,80 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>以特征向量的形式输入到神经网络<br><a id="more"></a></p>
+<p>#人工智能初识（二）：如何将数据输入到神经网络中 #</p>
+<hr>
+<p>如何将数据输入到神经网络中?例如，在语音识别、人脸识别这些应用中，是如何将语音、人脸输入到神经网络中的？<br>下面我继续拿识别猫的例子来给大家介绍如何将猫的图片数据输入到神经网络中。<br><img src="../assets/2_1_1.png" alt=""><br>此例中，待输入的数据是一张图像。为了存储图像，计算机要存储三个独立的矩阵（矩阵可以理解成二维数组），分别与此图像的红色、绿色和蓝色相对应（世界上的所有颜色都可以通过红绿蓝三种颜色调配出来）。如果图像的大小是64 <em> 64个像素（一个像素就是一个颜色点，一个颜色点由红绿蓝三个值来表示，例如，红绿蓝为255,255,255，那么这个颜色点就是白色），所以3个64 </em> 64大小的矩阵在计算机中代表了这张图像，矩阵对应于图像的红绿蓝强度值。上图中只画了个5 <em> 4的矩阵，而不是64 </em> 64，为什么呢？因为没有必要，搞复杂了反而不易于理解。</p>
+<p>为了更加方便后面的处理，我们一般把上面那3个矩阵转化成1个向量x（向量可以理解成1 <em> n或n </em> 1的数组，前者为行向量，后者为列向量）。那么这个向量x的总维数就是64 <em> 64 </em> 3，结果是12288。在人工智能领域中，每一个输入到神经网络的数据都被叫做一个特征，那么上面的这张图像中就有12288个特征。这个12288维的向量也被叫做特征向量。神经网络接收这个特征向量x作为输入，并进行预测，然后给出相应的结果。</p>
+<p>对于不同的应用，需要识别的对象不同，有些是语音有些是图像有些是传感器数据，但是它们在计算机中都有对应的数字表示形式，通常我们会把它们转化成一个特征向量，然后将其输入到神经网络中。</p>
+<p>到这里，我们已经知道数据是如何被输入到神经网络中的。那么神经网络是如何根据这些数据进行预测的呢？我们将一张图片输入到神经网络中，神经网络是如何预测这张图中是否有猫的呢？去看下一篇。</p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/GeowindBlog/categories/人工智能初识/">人工智能初识</a>, <a class="article-category-link" href="/GeowindBlog/categories/人工智能初识/（二）/">（二）</a>
+
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/GeowindBlog/tags/人工智能/">人工智能</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/GeowindBlog/tags/神经网络/">神经网络</a></li></ul>
+
       
             
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/GeowindBlog/archives/d08677b4.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">人工智能初识（一）：什么使深度学习火了</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 <!-- Table of Contents -->
 
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
     
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    <div class="widget-wrap" style="margin: 20px 0;">
-	<div id="search-form-wrap">
-
-    <form class="search-form">
-        <label style="width: 75%;">
-            <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
-        </label>
-        <input type="submit" class="search-form-submit" value="Search">
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/GeowindBlog/',
-        CONTENT_URL: '/GeowindBlog/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/GeowindBlog/js/insight.js"></script>
-
-</div>
-</div>
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Connect With Us</h3>
-    <div class="widget widget_athemes_social_icons">
-
-    	<ul class="clearfix widget-social-icons">   
-    	
-          
-     			  <li><a href="https://github.com/" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="http://geowind.org" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="http://geowind.org" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="http://geowind.org" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="http://geowind.org" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-            <li><a href="mailto:http://geowind.org?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
-          
-   		
-   		</ul>
-
-
-   		<!--
-   		<ul class="clearfix widget-social-icons">   		
-   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
-		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
-			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
-			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
-			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
-			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
-		</ul> -->
-
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget_athemes_tabs">
-    <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
-    </ul>
-    <div class="widget">
-      <ul>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/8c3e5841.html">人工智能初识（二）：如何将数据输入到神经网络中</a></h6>
-              <span>October 23, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/d08677b4.html">人工智能初识（一）：什么使深度学习火了</a></h6>
-              <span>October 23, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/af99dac3.html">人工智能初识（一）：监督学习型神经网络</a></h6>
-              <span>October 23, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/1ece966.html">人工智能初识（一）：什么是神经网络</a></h6>
-              <span>October 23, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/bc09e2e8.html">hyperledger术语表</a></h6>
-              <span>October 21, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/GeowindBlog/archives/e15dfbad.html">How to become a hacker</a></h6>
-              <span>October 21, 2018</span>
-            </div>
-
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/GeowindBlog/categories/人工智能初识/">人工智能初识</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/GeowindBlog/categories/人工智能初识/（一）/">（一）</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/GeowindBlog/categories/人工智能初识/（二）/">（二）</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/GeowindBlog/categories/区块链/">区块链</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/GeowindBlog/categories/区块链/超级账本/">超级账本</a><span class="category-list-count">1</span></li></ul></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/GeowindBlog/tags/人工智能/">人工智能</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/GeowindBlog/tags/区块链/">区块链</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/GeowindBlog/tags/摘录/">摘录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/GeowindBlog/tags/深度学习/">深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/GeowindBlog/tags/神经网络/">神经网络</a><span class="tag-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/GeowindBlog/tags/人工智能/" style="font-size: 20px;">人工智能</a> <a href="/GeowindBlog/tags/区块链/" style="font-size: 10px;">区块链</a> <a href="/GeowindBlog/tags/摘录/" style="font-size: 10px;">摘录</a> <a href="/GeowindBlog/tags/深度学习/" style="font-size: 10px;">深度学习</a> <a href="/GeowindBlog/tags/神经网络/" style="font-size: 15px;">神经网络</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/GeowindBlog/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li></ul>
-    </div>
-  </div>
-
-
-  
-</aside>
         
       </div>
       <footer id="footer" class="site-footer">
