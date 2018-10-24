@@ -13,7 +13,7 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>人工智能初识 1.4：如何将数据输入到神经网络中 | Blog of Geowind</title>
+  <title>人工智能初识 2.3：神经网络如何判断自己预测得是否准确 | Blog of Geowind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="人工智能神经网络">
@@ -21,20 +21,23 @@
   
   
   
-  <meta name="description" content="以特征向量的形式输入到神经网络">
+  <meta name="description" content="损失函数，成本函数">
 <meta name="keywords" content="人工智能,神经网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人工智能初识 1.4：如何将数据输入到神经网络中">
-<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/8c3e5841.html">
+<meta property="og:title" content="人工智能初识 2.3：神经网络如何判断自己预测得是否准确">
+<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/e2a94187.html">
 <meta property="og:site_name" content="Blog of Geowind">
-<meta property="og:description" content="以特征向量的形式输入到神经网络">
+<meta property="og:description" content="损失函数，成本函数">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
-<meta property="og:updated_time" content="2018-10-23T03:57:59.000Z">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/asstes/2_3_1.png">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_3_2.png">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_3_3.png">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_3_4.png">
+<meta property="og:updated_time" content="2018-10-24T13:15:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人工智能初识 1.4：如何将数据输入到神经网络中">
-<meta name="twitter:description" content="以特征向量的形式输入到神经网络">
-<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
+<meta name="twitter:title" content="人工智能初识 2.3：神经网络如何判断自己预测得是否准确">
+<meta name="twitter:description" content="损失函数，成本函数">
+<meta name="twitter:image" content="http://geowind.org/GeowindBlog/asstes/2_3_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
   
@@ -137,7 +140,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-人工智能初识 2.1：如何将数据输入到神经网络中" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-人工智能初识 2.3：神经网络如何判断自己预测得是否准确" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -145,7 +148,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      人工智能初识 1.4：如何将数据输入到神经网络中
+      人工智能初识 2.3：神经网络如何判断自己预测得是否准确
     </h1>
   
 
@@ -153,8 +156,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/GeowindBlog/archives/8c3e5841.html" class="article-date">
-	  <time datetime="2018-10-23T03:57:59.000Z" itemprop="datePublished">October 23, 2018</time>
+	Posted on <a href="/GeowindBlog/archives/e2a94187.html" class="article-date">
+	  <time datetime="2018-10-24T13:15:07.000Z" itemprop="datePublished">October 24, 2018</time>
 	</a>
 
       
@@ -165,13 +168,10 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以特征向量的形式输入到神经网络<br><a id="more"></a></p>
-<p>#人工智能初识（二）：如何将数据输入到神经网络中 #</p>
-<hr>
-<p>如何将数据输入到神经网络中?例如，在语音识别、人脸识别这些应用中，是如何将语音、人脸输入到神经网络中的？<br>下面我继续拿识别猫的例子来给大家介绍如何将猫的图片数据输入到神经网络中。<br><img src="../assets/2_1_1.png" alt=""><br>此例中，待输入的数据是一张图像。为了存储图像，计算机要存储三个独立的矩阵（矩阵可以理解成二维数组），分别与此图像的红色、绿色和蓝色相对应（世界上的所有颜色都可以通过红绿蓝三种颜色调配出来）。如果图像的大小是64 <em> 64个像素（一个像素就是一个颜色点，一个颜色点由红绿蓝三个值来表示，例如，红绿蓝为255,255,255，那么这个颜色点就是白色），所以3个64 </em> 64大小的矩阵在计算机中代表了这张图像，矩阵对应于图像的红绿蓝强度值。上图中只画了个5 <em> 4的矩阵，而不是64 </em> 64，为什么呢？因为没有必要，搞复杂了反而不易于理解。</p>
-<p>为了更加方便后面的处理，我们一般把上面那3个矩阵转化成1个向量x（向量可以理解成1 <em> n或n </em> 1的数组，前者为行向量，后者为列向量）。那么这个向量x的总维数就是64 <em> 64 </em> 3，结果是12288。在人工智能领域中，每一个输入到神经网络的数据都被叫做一个特征，那么上面的这张图像中就有12288个特征。这个12288维的向量也被叫做特征向量。神经网络接收这个特征向量x作为输入，并进行预测，然后给出相应的结果。</p>
-<p>对于不同的应用，需要识别的对象不同，有些是语音有些是图像有些是传感器数据，但是它们在计算机中都有对应的数字表示形式，通常我们会把它们转化成一个特征向量，然后将其输入到神经网络中。</p>
-<p>到这里，我们已经知道数据是如何被输入到神经网络中的。那么神经网络是如何根据这些数据进行预测的呢？我们将一张图片输入到神经网络中，神经网络是如何预测这张图中是否有猫的呢？去看下一篇。</p>
+        <p>损失函数，成本函数<br><a id="more"></a></p>
+<h1 id="神经网络如何判断自己预测得是否准确"><a href="#神经网络如何判断自己预测得是否准确" class="headerlink" title="神经网络如何判断自己预测得是否准确"></a>神经网络如何判断自己预测得是否准确</h1><p>在上一篇文章中，大家学习到了神经网络可以通过逻辑回归之类的算法来对输入进行预测。那么神经网络自己如何判断预测结果是否准确呢？这一步是非常重要的，因为只有知道自己预测结果是否准确，才能够对自身进行调整，好让结果越来越准确，这就是学习的过程。</p>
+<p>所以要验证学习成果，要判断预测结果是否准确，本篇文章介绍的损失函数（loss function）就是干这事的。<br><img src="../asstes/2_3_1.png" alt=""><br>我们先回顾一下上一篇文章中学到的预测算法，如上图。ŷ是预测的结果。上面的i角标指代某一个训练样本（本系列教程都会这样来指代某一个训练样本），例如，ŷ（i） 是对于训练样本x（i）的预测结果.<br><img src="../assets/2_3_2.png" alt=""><br>现在，让我们看看可以用什么损失函数来衡量我们的预测算法做得怎么样——预测的精准度高不高，损失函数运算后得出的结果越大，那么预测就与实际结果的偏差越大，即预测精度越不高。理论上你可以用上面的公式作为损失函数——预测结果ŷ与实际结果y的平方差再乘以二分之一。但是在实践中人们通常不会用它，具体为什么，后面的文章再给大家讲解，现在讲了你们也理解不了。 实践中我们使用的损失函数的公式如下。<br><img src="../assets/2_3_3.png" alt=""><br>前面的平方差公式比较直接，就是ŷ越接近y，那么运算得出的结果就越小，那么就说明预测越准确，即损失越小。努力使损失函数的值越小就是努力让预测的结果越准确。其实这个新的损失函数的作用是一样的。具体数学上面的细节我就不讲解了，因为文章的目的是让大家明白人工智能的原理，学会如何实现人工智能。</p>
+<p>上面对单个训练样本我们定义了损失函数。下面的公式用于衡量预测算法对整个训练集的预测精度。其实就是对每个样本的“损失”进行累加，然后求平均值。这种针对于整个训练集的损失函数我们称它为成本函数（cost function）。它的计算结果越大，说明成本越大，即预测越不准确。<br><img src="../assets/2_3_4.png" alt=""></p>
 
       
     </div>
@@ -217,19 +217,19 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/GeowindBlog/archives/b5cace6d.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/GeowindBlog/archives/612b682b.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          人工智能初识 2.2: 神经网络是如何进行预测的？
+          人工智能初识 2.4：神经网络是如何进行学习的
         
       </div>
     </a>
   
   
-    <a href="/GeowindBlog/archives/d08677b4.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GeowindBlog/archives/b5cace6d.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">人工智能初识 1.3：什么使深度学习火了</div>
+      <div class="article-nav-title">人工智能初识 2.2: 神经网络是如何进行预测的？</div>
     </a>
   
 </nav>
@@ -243,7 +243,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络如何判断自己预测得是否准确"><span class="nav-number">1.</span> <span class="nav-text">神经网络如何判断自己预测得是否准确</span></a></li></ol>
     
     </div>
   </aside>

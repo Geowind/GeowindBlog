@@ -13,7 +13,7 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>人工智能教程（二）: 神经网络是如何进行预测的？ | Blog of Geowind</title>
+  <title>人工智能初识 2.2: 神经网络是如何进行预测的？ | Blog of Geowind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="人工智能神经网络">
@@ -21,20 +21,20 @@
   
   
   
-  <meta name="description" content="…">
+  <meta name="description" content="线性回归预测，逻辑回归分类">
 <meta name="keywords" content="人工智能,神经网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人工智能教程（二）: 神经网络是如何进行预测的？">
+<meta property="og:title" content="人工智能初识 2.2: 神经网络是如何进行预测的？">
 <meta property="og:url" content="http://geowind.org/GeowindBlog/archives/b5cace6d.html">
 <meta property="og:site_name" content="Blog of Geowind">
-<meta property="og:description" content="…">
+<meta property="og:description" content="线性回归预测，逻辑回归分类">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_2_1.png">
 <meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_2_2.png">
 <meta property="og:updated_time" content="2018-10-24T02:56:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人工智能教程（二）: 神经网络是如何进行预测的？">
-<meta name="twitter:description" content="…">
+<meta name="twitter:title" content="人工智能初识 2.2: 神经网络是如何进行预测的？">
+<meta name="twitter:description" content="线性回归预测，逻辑回归分类">
 <meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/2_2_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
@@ -138,7 +138,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-人工智能教程（二）：神经网络是如何进行预测的？" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-人工智能初识 2.2：神经网络是如何进行预测的？" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -146,7 +146,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      人工智能教程（二）: 神经网络是如何进行预测的？
+      人工智能初识 2.2: 神经网络是如何进行预测的？
     </h1>
   
 
@@ -166,7 +166,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>…<br><a id="more"></a></p>
+        <p>线性回归预测，逻辑回归分类<br><a id="more"></a></p>
 <h1 id="人工智能教程（二）-神经网络是如何进行预测的？"><a href="#人工智能教程（二）-神经网络是如何进行预测的？" class="headerlink" title="人工智能教程（二） 神经网络是如何进行预测的？"></a>人工智能教程（二） 神经网络是如何进行预测的？</h1><p>上一篇文章中我们已经知道了如何将数据输入到神经网络中。那么神经网络是如何根据这些数据进行预测的呢？我们将一张图片输入到神经网络中，神经网络是如何预测这张图中是否有猫的呢？</p>
 <p>这个预测的过程其实只是基于一个简单的公式：z = dot(w,x) + b。</p>
 <p>上面公式中的x代表着输入特征向量，假设只有3个特征，那么x就可以用（x1，x2，x3）来表示。如下图所示。w表示权重，它对应于每个输入特征，代表了每个特征的重要程度。b表示阈值[yù zhí]，用来影响预测结果。z就是预测结果。公式中的dot()函数表示将w和x进行向量相乘。。我们现在只需要知道上面的公式展开后就变成了z = (x1 <em> w1 + x2 </em> w2 + x3 * w3) + b。<br><img src="../assets/2_2_1.png" alt=""><br>那么神经网络到底如何利用这个公式来进行预测的呢？下面通过一个实例来帮助大家理解。</p>
@@ -219,10 +219,19 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
+    <a href="/GeowindBlog/archives/e2a94187.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          人工智能初识 2.3：神经网络如何判断自己预测得是否准确
+        
+      </div>
+    </a>
+  
   
     <a href="/GeowindBlog/archives/8c3e5841.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">人工智能初识（二）：如何将数据输入到神经网络中</div>
+      <div class="article-nav-title">人工智能初识 1.4：如何将数据输入到神经网络中</div>
     </a>
   
 </nav>

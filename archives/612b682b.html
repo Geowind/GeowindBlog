@@ -13,7 +13,7 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>人工智能初识 1.4：如何将数据输入到神经网络中 | Blog of Geowind</title>
+  <title>人工智能初识 2.4：神经网络是如何进行学习的 | Blog of Geowind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="人工智能神经网络">
@@ -21,20 +21,22 @@
   
   
   
-  <meta name="description" content="以特征向量的形式输入到神经网络">
+  <meta name="description" content="梯度下降算法">
 <meta name="keywords" content="人工智能,神经网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人工智能初识 1.4：如何将数据输入到神经网络中">
-<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/8c3e5841.html">
+<meta property="og:title" content="人工智能初识 2.4：神经网络是如何进行学习的">
+<meta property="og:url" content="http://geowind.org/GeowindBlog/archives/612b682b.html">
 <meta property="og:site_name" content="Blog of Geowind">
-<meta property="og:description" content="以特征向量的形式输入到神经网络">
+<meta property="og:description" content="梯度下降算法">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
-<meta property="og:updated_time" content="2018-10-23T03:57:59.000Z">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_4_1.png">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_4_2.png">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_4_3.png">
+<meta property="og:updated_time" content="2018-10-24T13:36:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人工智能初识 1.4：如何将数据输入到神经网络中">
-<meta name="twitter:description" content="以特征向量的形式输入到神经网络">
-<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/2_1_1.png">
+<meta name="twitter:title" content="人工智能初识 2.4：神经网络是如何进行学习的">
+<meta name="twitter:description" content="梯度下降算法">
+<meta name="twitter:image" content="http://geowind.org/GeowindBlog/assets/2_4_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Blog of Geowind" type="application/atom+xml">
   
@@ -137,7 +139,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-人工智能初识 2.1：如何将数据输入到神经网络中" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-人工智能初识 2.4：神经网络是如何进行学习的" style="width: 66%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -145,7 +147,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      人工智能初识 1.4：如何将数据输入到神经网络中
+      人工智能初识 2.4：神经网络是如何进行学习的
     </h1>
   
 
@@ -153,8 +155,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/GeowindBlog/archives/8c3e5841.html" class="article-date">
-	  <time datetime="2018-10-23T03:57:59.000Z" itemprop="datePublished">October 23, 2018</time>
+	Posted on <a href="/GeowindBlog/archives/612b682b.html" class="article-date">
+	  <time datetime="2018-10-24T13:36:06.000Z" itemprop="datePublished">October 24, 2018</time>
 	</a>
 
       
@@ -165,13 +167,16 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以特征向量的形式输入到神经网络<br><a id="more"></a></p>
-<p>#人工智能初识（二）：如何将数据输入到神经网络中 #</p>
+        <p>梯度下降算法</p>
+<a id="more"></a>
 <hr>
-<p>如何将数据输入到神经网络中?例如，在语音识别、人脸识别这些应用中，是如何将语音、人脸输入到神经网络中的？<br>下面我继续拿识别猫的例子来给大家介绍如何将猫的图片数据输入到神经网络中。<br><img src="../assets/2_1_1.png" alt=""><br>此例中，待输入的数据是一张图像。为了存储图像，计算机要存储三个独立的矩阵（矩阵可以理解成二维数组），分别与此图像的红色、绿色和蓝色相对应（世界上的所有颜色都可以通过红绿蓝三种颜色调配出来）。如果图像的大小是64 <em> 64个像素（一个像素就是一个颜色点，一个颜色点由红绿蓝三个值来表示，例如，红绿蓝为255,255,255，那么这个颜色点就是白色），所以3个64 </em> 64大小的矩阵在计算机中代表了这张图像，矩阵对应于图像的红绿蓝强度值。上图中只画了个5 <em> 4的矩阵，而不是64 </em> 64，为什么呢？因为没有必要，搞复杂了反而不易于理解。</p>
-<p>为了更加方便后面的处理，我们一般把上面那3个矩阵转化成1个向量x（向量可以理解成1 <em> n或n </em> 1的数组，前者为行向量，后者为列向量）。那么这个向量x的总维数就是64 <em> 64 </em> 3，结果是12288。在人工智能领域中，每一个输入到神经网络的数据都被叫做一个特征，那么上面的这张图像中就有12288个特征。这个12288维的向量也被叫做特征向量。神经网络接收这个特征向量x作为输入，并进行预测，然后给出相应的结果。</p>
-<p>对于不同的应用，需要识别的对象不同，有些是语音有些是图像有些是传感器数据，但是它们在计算机中都有对应的数字表示形式，通常我们会把它们转化成一个特征向量，然后将其输入到神经网络中。</p>
-<p>到这里，我们已经知道数据是如何被输入到神经网络中的。那么神经网络是如何根据这些数据进行预测的呢？我们将一张图片输入到神经网络中，神经网络是如何预测这张图中是否有猫的呢？去看下一篇。</p>
+<h1 id="神经网络是如何进行学习的"><a href="#神经网络是如何进行学习的" class="headerlink" title="神经网络是如何进行学习的"></a>神经网络是如何进行学习的</h1><p> 大家已经学过如何将待预测数据输入到神经网络中，也明白了神经网络是如何对这些数据进行预测的，还知道了神经网络是如何判断自己预测得是否准确的。那么如果结果预测得不准确，是不是要想办法让预测变得准确呢？这个努力让自己预测得更准确的过程就是学习。</p>
+<p>在前面的文章中，我们已经知道，预测得是否准确是由w和b决定的，所以神经网络学习的目的就是要找到合适的w和b。通过一个叫做梯度下降（gradient descent）的算法可以达到这个目的。梯度下降算法会一步一步地改变w和b的值,新的w和b会使损失函数的输出结果更小，即一步一步让预测更加精准。<br><img src="../assets/2_4_1.png" alt=""></p>
+<p>上面的公式是我们之前学到的逻辑回归算法（用于预测），以及损失函数（用于判断预测是否准确）。结合上面两个公式，输入x和实际结果y都是固定的，所以损失函数其实是一个关于w和b的函数（w和b是变量）。所谓“学习”或“训练神经网络”，就是找到一组w和b，使这个损失函数最小，即使预测结果更精准。<br><img src="../assets/2_4_2.png" alt=""></p>
+<p>如上图所示，损失函数J的形状是一个漏斗状。我们训练的目的就是找到在漏斗底部的一组w和b。这种漏斗状的函数被称为凸函数（向下凸起的函数）。我们选择J为损失函数的原因正是因为J是一个凸函数。而我们之前遇到的平方差函数不是一个凸函数，那么就很难找到最小值，这就是为什么我们不采用平方差函数作为损失函数的原因。<br><img src="../assets/2_4_3.png" alt=""><br>如上图所示，梯度下降算法会一步一步地更新w和b，使损失函数一步一步地变得更小，最终找到最小值或接近最小值的地方。    </p>
+<p>那么到底这个神秘的梯度下降算法是如何来更新w和b的呢？为了简化问题，让大家更容易理解其中的理论，我们先假设损失函数J只有一个参数w（实际上J是一个关于w和b的函数），并且假设w只是一个实数（实际上w是一个向量/一组实数）。如上图，梯度下降算法一步一步地在改变着w的值，在使损失函数的结果越来越小（将w的值一步一步的移到红点处）。我们是通过下面的公式来改变w的值的。</p>
+<p>w’ = w – r * dw</p>
+<p>梯度下降算法就是重复的执行上面的公式来不停的更新w的值。新的w的值（w’）等于旧的w减去学习率r与偏导数dw的乘积。</p>
 
       
     </div>
@@ -217,19 +222,19 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/GeowindBlog/archives/b5cace6d.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/GeowindBlog/archives/ebb9c432.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          人工智能初识 2.2: 神经网络是如何进行预测的？
+          人工智能初识 2.5：如何计算逻辑回归的偏导数
         
       </div>
     </a>
   
   
-    <a href="/GeowindBlog/archives/d08677b4.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/GeowindBlog/archives/e2a94187.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">人工智能初识 1.3：什么使深度学习火了</div>
+      <div class="article-nav-title">人工智能初识 2.3：神经网络如何判断自己预测得是否准确</div>
     </a>
   
 </nav>
@@ -243,7 +248,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络是如何进行学习的"><span class="nav-number">1.</span> <span class="nav-text">神经网络是如何进行学习的</span></a></li></ol>
     
     </div>
   </aside>
