@@ -30,7 +30,7 @@
 <meta property="og:description" content="…">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_2_1.png">
-<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_2_2">
+<meta property="og:image" content="http://geowind.org/GeowindBlog/assets/2_2_2.png">
 <meta property="og:updated_time" content="2018-10-24T02:56:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人工智能教程（二）: 神经网络是如何进行预测的？">
@@ -173,7 +173,7 @@ var themeMenus = {};
 <p>假设周末经纬度举办一个关于机器学习的研讨会，我们要预测你会不会来参加。假设是否影响你参加这次研讨会的因素有三个，时间，天气，内容。这三个元素就可以看作是3个输入特征，那你对三者的重视程度就是三个权重。如果时间确定为很早，天气很差，内容却很精彩，那么三个特征可以表示（0，0，1），有设关于你们对于三者的重视程度都知道为（2，2，7）并设阈值b是-5，则 = (x1 <em> w1 + x2 </em> w2 + x3 <em> w3) + b = (0 </em> 2 + 0 <em> 2 + 1 </em> 7) + (-5) = 2；z大于0就预测你会参见研讨会。</p>
 <p>又如果天气特别查，刮起了台风，这个时候你对三个因素的重视程度就改变为（2，7，2）及你对天气重视程度很高，那么z = (x1 <em> w1 + x2 </em> w2 + x3 <em> w3) + b = (0 </em> 2 + 0 <em> 7 + 1 </em> 2) + (-5) = -3；z小于0则表示你不回去。</p>
 <p>所以<strong>最最最简化</strong>的说预测图片里有没有猫也是通过基于上面的公式。经过训练的神经网络会得到一组与猫相关的权重。当我们把一张图片输入到神经网络中，图片数据会与这组权重以及阈值进行运算，结果大于0就是有猫，小于0就是没有猫。（实际过程这里不做详解）</p>
-<p>然而在实际的神经网络中，我们会在上述公式外面再套上一个函数，这个函数称为激活函数，可以先看一下叫做sigmoid的激活函数：<br><img src="../assets/2_2_2" alt=""><br>由图像显而易见的是Sigmoid函数将任何连续的数值映射到[0,1]之间，这样子获得预测结果更加容易理解了，0即不是希望值，1即是希望值。希望更深刻的了解线性回归，逻辑回归的知识可以参考另一篇博客。</p>
+<p>然而在实际的神经网络中，我们会在上述公式外面再套上一个函数，这个函数称为激活函数，可以先看一下叫做sigmoid的激活函数：<br><img src="../assets/2_2_2.png" alt=""><br>由图像显而易见的是Sigmoid函数将任何连续的数值映射到[0,1]之间，这样子获得预测结果更加容易理解了，0即不是希望值，1即是希望值。希望更深刻的了解线性回归，逻辑回归的知识可以参考另一篇博客。</p>
 
       
     </div>
